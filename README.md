@@ -22,14 +22,17 @@ mtl: url(/cat/12221_Cat_v1_l3.mtl)" scale="0.05 0.05 0.05" rotation="-90 0 0">
 
 #### 注意
 
-- ダウンロードしたディレクトリの中身のファイル名たちは変更しないこと。
+- ダウンロードした3Dディレクトリ内のファイル名は変更しないこと。
 - 大きさや角度は `scale` や `rotation` の数字をいじって調整
 
 ### 3. Netlifyにデプロイ
 
+[Netlify](https://app.netlify.com/teams/deerboy/sites)（無料）
+
 - GitHubと連携をオススメ
 - プロジェクトディレクトリを丸ごとドロップしてもいい
 - URLは設定画面から変えられます。
+- Netlifyじゃなくてもいいです。
 
 #### 注意
 
