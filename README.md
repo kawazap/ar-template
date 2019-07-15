@@ -9,7 +9,7 @@
 
 ### 2. 3Dモデルを調達&設置
 
-- [Free 3D](https://free3d.com/ja/)で好みのマテリアル付き3Dを調達（マテリアルは[こいういうの](https://github.com/deerboy/ar-template/blob/master/cat/Cat_bump.jpg?raw=true)）
+- [Free 3D](https://free3d.com/ja/)で好みのマテリアル付き3Dを**obj形式**でダウンロード（マテリアルは[こいういうの](https://github.com/deerboy/ar-template/blob/master/cat/Cat_bump.jpg?raw=true)）
 - 解答したディレクトリをプロジェクトディレクトリに設置（現状catがある）
 - index.htmlの以下の部分を設置したディレクトリのパスに変更
 
