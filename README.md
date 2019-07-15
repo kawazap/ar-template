@@ -13,6 +13,13 @@
 - 解答したディレクトリをプロジェクトディレクトリに設置（現状catがある）
 - index.htmlの以下の部分を設置したディレクトリのパスに変更
 
+```html
+<a-entity 
+obj-model="obj: url(/cat/12221_Cat_v1_l3.obj); 
+mtl: url(/cat/12221_Cat_v1_l3.mtl)" scale="0.05 0.05 0.05" rotation="-90 0 0">
+</a-entity>
+```
+
 #### 注意
 
 - ダウンロードしたディレクトリの中身のファイル名たちは変更しないこと。
