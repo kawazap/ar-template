@@ -5,7 +5,7 @@
 ### 1. このプロジェクトをダウンロード
 
 - ダウンロードは[こちら](https://github.com/deerboy/ar-template/archive/master.zip)
-- Gitがわかる人はcloneでもOK
+- あるいはこのリポジトリを[テンプレートとして](https://github.com/deerboy/ar-template/generate)マイリポジトリを作ってください
 
 ### 2. 3Dモデルを調達&設置
 
