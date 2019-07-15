@@ -13,6 +13,8 @@
 - 解答したディレクトリをプロジェクトディレクトリに設置（現状catがある）
 - index.htmlの以下の部分を設置したディレクトリのパスに変更
 
+`/cat/12221_Cat_v1_l3.obj`と`/cat/12221_Cat_v1_l3.mtl`の2箇所を修正
+
 ```html
 <a-entity 
 obj-model="obj: url(/cat/12221_Cat_v1_l3.obj); 
