@@ -11,10 +11,9 @@
   <script src="https://aframe.io/releases/0.9.1/aframe.min.js"></script>
   <!-- AR.js ライブラリの読み込み -->
   <script src="https://rawgit.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
-
-  <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
-  <!-- events.js ライブラリの読み込み -->
-  <script src="https://rawgit.com/nicolocarpignoli/nicolocarpignoli.github.io/master/ar-click-events/events.js"></script>
+  <!-- shaderライブラリ読み込み -->
+  <script src="https://rawgit.com/mayognaise/aframe-gif-shader/master/dist/aframe-gif-shader.min.js"></script>
+  <script src="shader-grid-glitch.js"></script>
 
 
   <body style='margin : 0px; overflow: hidden;'>
@@ -35,9 +34,25 @@
       <!--<a-marker id="animated-marker" type='barcode' value='6'>-->
       <!--a-marker-camera preset="custom"  type='pattern' url="pattern-satumaimo.patt"-->
       <a-marker preset='hiro'>
-        <a-obj-model src="#Ob-Hatena" mtl="#Mt-Hatena" scale="0.3 0.3 0.3" position="0 0 0" link="href: https://kawazap.hatenablog.com; title: Hatena; image: #Ob-Hatena"></a-obj-moderl>
-        <a-obj-model src="#Ob-Twitter" mtl="#Mt-Twitter" scale="1 1 1" position="3 0 0"></a-obj-moderl>
-        <a-obj-model src="#Ob-portfolio" mtl="#Mt-portfolio" scale="1 1 1" position="3.5 0 0"></a-obj-moderl>
+        <a-obj-model 
+            src="#Ob-Hatena" 
+            mtl="#Mt-Hatena" 
+            scale="0.3 0.3 0.3" 
+            position="0 0 0" 
+            link="href: https://kawazap.hatenablog.com; title: Hatena;">
+        </a-obj-moderl>
+        <a-obj-model 
+            src="#Ob-Twitter" 
+            mtl="#Mt-Twitter" 
+            scale="1 1 1" 
+            position="3 0 0">
+        </a-obj-moderl>
+        <a-obj-model 
+            src="#Ob-portfolio" 
+            mtl="#Mt-portfolio" 
+            scale="1 1 1" 
+            position="3.5 0 0">
+        </a-obj-moderl>
       </a-marker>
     　　
 
@@ -57,10 +72,9 @@
         </a-entity>
       </a-marker>
     -->
-
-      <a-entity camera>
-        <a-entity cursor="fuse: false; fuseTimeout: 500">
-      </a-entity>
+      
+      <!--AR用カメラ-->
+      <a-entity camera></a-entity>
     </a-scene>
   </body>
 
