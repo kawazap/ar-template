@@ -19,7 +19,8 @@
     <a-scene embedded arjs="debugUIEnabled:false;" renderer="gammaOutput: true;" vr-mode-ui="enabled: false">
       <!--外部ファイルの読み込み-->
       <a-assets>
-        <a-asset-item id="Hatena" src="./image/Hatena.obj"></a-asset-item>
+        <a-asset-item id="Ob-Hatena" src="./image/Hatena.obj"></a-asset-item>
+        <a-asset-item id="Mt-Hatena" src="./image/Hatena.mtl"></a-asset-item>
         <a-asset-item id="portfolio" src="./image/portfolio.obj"></a-asset-item>
         <a-asset-item id="Twitter" src="./image/Twitter.obj"></a-asset-item>
         <a-asset-item id="Ob-cat" src="./cat/12221_Cat_v1_l3.obj"></a-asset-item>
@@ -29,7 +30,7 @@
       <!--<a-marker id="animated-marker" type='barcode' value='6'>-->
       <!--a-marker-camera preset="custom"  type='pattern' url="pattern-satumaimo.patt"-->
       <a-marker preset='hiro'>
-        <a-obj-model src="#Ob-cat" mtl="#Mt-cat" scale="0.005 0.005 0.005" position="0 0.5 0.5"></a-obj-moderl>
+        <a-obj-model src="#Ob-Hatena" mtl="#Mt-Hatena" scale="0.05 0.05 0.05" position="0 0 0"></a-obj-moderl>
       </a-marker>
     　　
 
