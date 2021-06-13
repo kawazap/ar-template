@@ -1,58 +1,58 @@
 <!doctype HTML>
 <html>
 
-<head>
-  <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-</head>
-<!-- A-Frame ライブラリの読み込み -->
-<script src="https://aframe.io/releases/0.9.1/aframe.min.js"></script>
-<!-- AR.js ライブラリの読み込み -->
-<script src="https://rawgit.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
+  <head>
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+  </head>
+  <!-- A-Frame ライブラリの読み込み -->
+  <script src="https://aframe.io/releases/0.9.1/aframe.min.js"></script>
+  <!-- AR.js ライブラリの読み込み -->
+  <script src="https://rawgit.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
 
-<script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
-<!-- events.js ライブラリの読み込み -->
-<script src="https://rawgit.com/nicolocarpignoli/nicolocarpignoli.github.io/master/ar-click-events/events.js"></script>
+  <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+  <!-- events.js ライブラリの読み込み -->
+  <script src="https://rawgit.com/nicolocarpignoli/nicolocarpignoli.github.io/master/ar-click-events/events.js"></script>
 
 
-<body style='margin : 0px; overflow: hidden;'>
-  
-  <a-scene embedded arjs="debugUIEnabled:false;" renderer="gammaOutput: true;" vr-mode-ui="enabled: false">
-    <!--外部ファイルの読み込み-->
-    <a-assets>
-      <a-asset-item id="Hatena" src="./image/Hatena.obj"></a-asset-item>
-      <a-asset-item id="portfolio" src="./image/portfolio.obj"></a-asset-item>
-      <a-asset-item id="Twitter" src="./image/Twitter.obj"></a-asset-item>
-    </a-assets>
+  <body style='margin : 0px; overflow: hidden;'>
+    
+    <a-scene embedded arjs="debugUIEnabled:false;" renderer="gammaOutput: true;" vr-mode-ui="enabled: false">
+      <!--外部ファイルの読み込み-->
+      <a-assets>
+        <a-asset-item id="Hatena" src="./image/Hatena.obj"></a-asset-item>
+        <a-asset-item id="portfolio" src="./image/portfolio.obj"></a-asset-item>
+        <a-asset-item id="Twitter" src="./image/Twitter.obj"></a-asset-item>
+      </a-assets>
 
-    <!--<a-marker id="animated-marker" type='barcode' value='6'>-->
-    <!--a-marker-camera preset="custom"  type='pattern' url="pattern-satumaimo.patt"-->
-    <a-marker preset='hiro' marker>
-      <a-entity 
-      obj-model="obj: url(/cat/12221_Cat_v1_l3.obj); 
-      mtl: url(/cat/12221_Cat_v1_l3.mtl)" scale="0.5 0.5 0.5" rotation="-90 0 0">
-      </a-entity>
-    </a-marker>
-  　　
+      <!--<a-marker id="animated-marker" type='barcode' value='6'>-->
+      <!--a-marker-camera preset="custom"  type='pattern' url="pattern-satumaimo.patt"-->
+      <a-marker preset='hiro' >
+        <a-entity 
+        obj-model="obj: url(/cat/12221_Cat_v1_l3.obj); 
+        mtl: url(/cat/12221_Cat_v1_l3.mtl)" scale="0.5 0.5 0.5" rotation="-90 0 0">
+        </a-entity>
+      </a-marker>
+    　　
 
-    <!--
-    <a-marker type='pattern' url='./marker/pattern-satumaimo.patt'>
-      <a-entity 
-      obj-model="obj: url(/image/Hatena.obj); 
-      mtl: url(/image/Hatena.mtl)" position="0 .5 0"  scale="0.05 0.05 0.05" link="href: https://kawazap.hatenablog.com; title: blog;">
-      </a-entity>
-      <a-entity 
-      obj-model="obj: url(/image/portfolio.obj); 
-      mtl: url(/image/portfolio.mtl)" position="0 .5 0" scale="0.05 0.05 0.05"  link="href: https://kawazap.github.io/main; title: portfolio;">
-      </a-entity>
-      <a-entity 
-      obj-model="obj: url(/image/Twitter.obj); 
-      mtl: url(/image/Twitter.mtl)" position="0 .5 0" scale="0.05 0.05 0.05" link="href: https://twitter.com/mikan45593608; title: Twitter;">
-      </a-entity>
-    </a-marker>
-  -->
+      <!--
+      <a-marker type='pattern' url='./marker/pattern-satumaimo.patt'>
+        <a-entity 
+        obj-model="obj: url(/image/Hatena.obj); 
+        mtl: url(/image/Hatena.mtl)" position="0 .5 0"  scale="0.05 0.05 0.05" link="href: https://kawazap.hatenablog.com; title: blog;">
+        </a-entity>
+        <a-entity 
+        obj-model="obj: url(/image/portfolio.obj); 
+        mtl: url(/image/portfolio.mtl)" position="0 .5 0" scale="0.05 0.05 0.05"  link="href: https://kawazap.github.io/main; title: portfolio;">
+        </a-entity>
+        <a-entity 
+        obj-model="obj: url(/image/Twitter.obj); 
+        mtl: url(/image/Twitter.mtl)" position="0 .5 0" scale="0.05 0.05 0.05" link="href: https://twitter.com/mikan45593608; title: Twitter;">
+        </a-entity>
+      </a-marker>
+    -->
 
-    <a-entity camera></a-entity>
-  </a-scene>
-</body>
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
 
 </html>
