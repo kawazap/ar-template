@@ -31,9 +31,8 @@
         <a-asset-item id="Mt-Twitter" src="./image/Twitter.mtl"></a-asset-item>
       </a-assets>
 
-      <!--<a-marker id="animated-marker" type='barcode' value='6'>-->
+      <!--オブジェクトの位置について-->
       <a-marker preset="custom"  type='pattern' url="./marker/pattern-qrcode.patt">
-      <!--a-marker preset='hiro'-->
         <a-obj-model 
             src="#Ob-Hatena" 
             mtl="#Mt-Hatena" 
@@ -52,27 +51,10 @@
             src="#Ob-portfolio" 
             mtl="#Mt-portfolio" 
             scale="1 1 1" 
-            position="6.0 0 0">
+            position="6.0 0 0"
+            link="href: https://kawazap.github.io/main;">
         </a-obj-moderl>
       </a-marker>
-    　　
-
-      <!--
-      <a-marker type='pattern' url='./marker/pattern-satumaimo.patt'>
-        <a-entity 
-        obj-model="obj: url(/image/Hatena.obj); 
-        mtl: url(/image/Hatena.mtl)" position="0 .5 0"  scale="0.05 0.05 0.05" link="href: https://kawazap.hatenablog.com; title: blog;">
-        </a-entity>
-        <a-entity 
-        obj-model="obj: url(/image/portfolio.obj); 
-        mtl: url(/image/portfolio.mtl)" position="0 .5 0" scale="0.05 0.05 0.05"  link="href: https://kawazap.github.io/main; title: portfolio;">
-        </a-entity>
-        <a-entity 
-        obj-model="obj: url(/image/Twitter.obj); 
-        mtl: url(/image/Twitter.mtl)" position="0 .5 0" scale="0.05 0.05 0.05" link="href: https://twitter.com/mikan45593608; title: Twitter;">
-        </a-entity>
-      </a-marker>
-    -->
       
       <!--AR用カメラ-->
       <a-entity camera></a-entity>
