@@ -29,6 +29,8 @@
         <a-asset-item id="Mt-portfolio" src="./image/portfolio.mtl"></a-asset-item>
         <a-asset-item id="Ob-Twitter" src="./image/Twitter.obj"></a-asset-item>
         <a-asset-item id="Mt-Twitter" src="./image/Twitter.mtl"></a-asset-item>
+        <a-asset-item id="Ob-Twitter" src="./image/instagram.obj"></a-asset-item>
+        <a-asset-item id="Mt-Twitter" src="./image/instagram.mtl"></a-asset-item>
       </a-assets>
 
       <!--オブジェクトの位置について-->
@@ -37,27 +39,34 @@
             src="#Ob-Hatena" 
             mtl="#Mt-Hatena" 
             scale="0.3 0.3 0.3" 
-            position="0 0.5 -0.5" 
+            position="2 0.5 -0.5" 
             link="href: https://kawazap.hatenablog.com;">
         </a-obj-moderl>
         <a-obj-model 
             src="#Ob-Twitter" 
             mtl="#Mt-Twitter" 
             scale="1 1 1" 
-            position="-3 0 0"
+            position="2 0 0"
             link="href: https://twitter.com/mikan45593608;">
         </a-obj-moderl>
         <a-obj-model 
             src="#Ob-portfolio" 
             mtl="#Mt-portfolio" 
             scale="1 1 1" 
-            position="6.0 0 0"
+            position="-8 0 0"
             link="href: https://kawazap.github.io/main;">
+        <a-obj-model 
+            src="#Ob-Insta" 
+            mtl="#Mt-Insta" 
+            scale="1 1 1" 
+            position="-8 0 0">
         </a-obj-moderl>
       </a-marker>
       
       <!--AR用カメラ-->
-      <a-entity camera></a-entity>
+      <a-entity camera>
+
+      </a-entity>
     </a-scene>
   </body>
 
