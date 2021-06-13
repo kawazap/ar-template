@@ -16,13 +16,19 @@
 
 <body style='margin : 0px; overflow: hidden;'>
   
-  <a-scene embedded arjs='sourceType: webcam; debugUI:Enabled; detectionMode: mono_and_matrix;'>
-  
+  <a-scene embedded arjs='sourceType: webcam; debugUI:Enabled; vr-mode-ui="enabled: false'>
+    <!--外部ファイルの読み込み-->
+    <a-assets>
+      <a-asset-item id="Hatena" src="./image/Hatena.obj"></a-asset-item>
+      <a-asset-item id="portfolio" src="./image/portfolio.obj"></a-asset-item>
+      <a-asset-item id="Twitter" src="./image/Twitter.obj"></a-asset-item>
+    </a-assets>
+
     <!--<a-marker id="animated-marker" type='barcode' value='6'>-->
-    <a-marker-camera type='pattern' url="./marker/pattern-satumaimo.patt">
+    <a-marker-camera preset="custom"  type='pattern' url="./marker/pattern-satumaimo.patt">
       <a-entity 
       obj-model="obj: url(/cat/12221_Cat_v1_l3.obj); 
-      mtl: url(/cat/12221_Cat_v1_l3.mtl)" scale="0.05 0.05 0.05" rotation="-90 0 0">
+      mtl: url(/cat/12221_Cat_v1_l3.mtl)" scale="0.5 0.5 0.5" rotation="-90 0 0">
       </a-entity>
     </a-marker>
   　　
