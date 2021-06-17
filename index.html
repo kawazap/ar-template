@@ -15,9 +15,9 @@
   <script src="https://rawgit.com/mayognaise/aframe-gif-shader/master/dist/aframe-gif-shader.min.js"></script>
   <!-- A-Frame内でリンクをつけるのに必要 -->
   <script src="https://rawgit.com/gasolin/aframe-href-component/master/dist/aframe-href-component.min.js"></script>
-  <!-- events.js ライブラリの読み込み -->
-<script src="https://rawgit.com/nicolocarpignoli/nicolocarpignoli.github.io/master/ar-click-events/events.js"></script>
-  <script src="shader-grid-glitch.js"></script>
+  <!--linkを開くためのもの-->
+  <script src="./js/link.js"></script>
+</script>
 
 
   <body style='margin : 0px; overflow: hidden;'>
@@ -49,7 +49,7 @@
             obj-model="obj:#Ob-Twitter; mtl:#Mt-Twitter;" 
             scale="1 1 1" 
             position="-3 0 0"
-            link="href: https://twitter.com/mikan45593608; title:Twitter;">
+            new_window="link: https://twitter.com/mikan45593608; title:Twitter;">
         </a-entry>
         <a-entry
             id = portfolio
