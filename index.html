@@ -7,6 +7,7 @@
     <link rel="icon" href="favicon.ico">
     <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
   </head>
+
   <!-- A-Frame ライブラリの読み込み -->
   <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
   <!-- AR.js ライブラリの読み込み -->
@@ -20,8 +21,7 @@
 </script>
 
 
-  <body style='margin : 0px; overflow: hidden;'>
-    
+
     <a-scene embedded arjs="debugUIEnabled:false;" renderer="gammaOutput: true;" vr-mode-ui="enabled: false">
       <!--外部ファイルの読み込み-->
       <a-assets>
@@ -37,27 +37,27 @@
 
       <!--オブジェクトの位置について-->
       <a-marker preset="custom"  type='pattern' url="./marker/pattern-qrcode.patt">
-        <a-entry 
-            id = "Hatena"
-            obj-model="obj:#Ob-Hatena; mtl:#Mt-Hatena;" 
+        <a-obj-model  
+            src="#Ob-Hatena"
+            mtl="#Mt-Hatena" 
             scale="0.3 0.3 0.3" 
             position="1 0.5 -0.5" 
-            link="href: https://kawazap.hatenablog.com; title: HatenaBlog;">
-        </a-entry>
-        <a-entry
-            id = TWitter
-            obj-model="obj:#Ob-Twitter; mtl:#Mt-Twitter;" 
+            new_window="link: https://kawazap.hatenablog.com; title: HatenaBlog;">
+        </a-obj-model >
+        <a-obj-model 
+            src="#Ob-Twitter"
+            mtl="#Mt-Twitter" 
             scale="1 1 1" 
             position="-3 0 0"
             new_window="link: https://twitter.com/mikan45593608; title:Twitter;">
-        </a-entry>
-        <a-entry
-            id = portfolio
-            obj-model="obj:#Ob-portfolio; mtl:Mt-portfolio;" 
+        </a-obj-model >
+        <a-obj-model 
+            src="#Ob-portfolio"
+            mtl="Mt-portfolio" 
             scale="1 1 1" 
             position="6 0 0"
-            link="href: https://kawazap.github.io/main; title:Portfolio;">
-          </a-entry>
+            new_window="link: https://kawazap.github.io/main; title:Portfolio;">
+          </a-obj-model >
         <!--a-obj-model 
             src="#Ob-Insta" 
             mtl="#Mt-Insta" 
