@@ -36,6 +36,7 @@
       </a-assets>
 
       <!--オブジェクトの位置について-->
+      <!--
       <a-marker preset="custom"  type='pattern' url="./marker/pattern-qrcode.patt">
         <a-obj-model  
             src="#Ob-Hatena"
@@ -48,7 +49,7 @@
           position="1 0.5 0"
         ></a-entity>
 
-        <!--
+
         <a-obj-model 
             src="#Ob-Twitter"
             mtl="#Mt-Twitter" 
@@ -77,6 +78,26 @@
             scale="1 1 1" 
             position="-9 0 0"-->
         <!--/a-obj-model-->-->
+
+        <a-entity 
+            link="href: https://kawazap.github.io/main; 
+            title: Twitter; 
+            image: Ob-Twitter" 
+            position="0 1.2 -4">
+        </a-entity>
+
+        <a-link 
+            href="https://kawazap.github.io/main" 
+            title="portfolio" 
+            image="Ob-portfolio" 
+            position="-4 1.2 -4">
+        </a-link>
+
+        <a-link href="https://kawazap.hatenablog.com" 
+            title="Hatena" 
+            image="ob-Hatena" 
+            position="4 1.2 -4">
+        </a-link>
       </a-marker>
       
       <!--AR用カメラ-->
