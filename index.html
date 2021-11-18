@@ -18,11 +18,19 @@
   <script src="https://rawgit.com/gasolin/aframe-href-component/master/dist/aframe-href-component.min.js"></script>
   <!--linkを開くためのもの-->
   <script src="./js/link.js"></script>
-</script>
+  <script>
+    AFRAME.registerComponent("mylink", {
+      init: function() {
+      this.el.addEventListener("click", (e)=> {
+            window.location = this.data.href;
+      })
+      }
+    })
+  </script>
 
 
 
-    <a-scene embedded arjs="debugUIEnabled:false;" renderer="gammaOutput: true;" vr-mode-ui="enabled: false">
+    <a-scene embedded arjs="debugUIEnabled:false;" renderer="gammaOutput: true;" vr-mode-ui="enabled: false;" cursor="rayOrigin: mouse">
       <!--外部ファイルの読み込み-->
       <a-assets>
         <a-asset-item id="Ob-Hatena" src="./image/Hatena.obj"></a-asset-item>
