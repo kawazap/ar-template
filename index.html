@@ -18,6 +18,8 @@
   <script src="https://rawgit.com/gasolin/aframe-href-component/master/dist/aframe-href-component.min.js"></script>
   <!--linkを開くためのもの-->
   <script src="./js/link.js"></script>
+  <!--A-frane GUI-->
+  <script src="https://rawgit.com/rdub80/aframe-gui/master/dist/aframe-gui.min.js"></script>
   <script>
     AFRAME.registerComponent("mylink", {
       init: function() {
@@ -26,11 +28,18 @@
       })
       }
     })
+
+    window.button = function () {
+      var button = document.getElementById("button");
+      var url = button.getAttribute('link');
+      window.location.href = url;
+    }
+
   </script>
 
 
 
-    <a-scene embedded arjs="debugUIEnabled:false;" renderer="gammaOutput: true;" vr-mode-ui="enabled: false;" cursor="rayOrigin: mouse">
+    <a-scene embedded arjs="debugUIEnabled:false;" renderer="gammaOutput: true;" vr-mode-ui="enabled: false" >
       <!--外部ファイルの読み込み-->
       <a-assets>
         <a-asset-item id="Ob-Hatena" src="./image/Hatena.obj"></a-asset-item>
@@ -92,7 +101,7 @@
             position="-9 0 0"-->
         <!--/a-obj-model-->-->
 
-        <a-entity 
+        <!--a-entity 
             link="href: https://twitter.com/mikan45593608; 
             title: Twitter; 
             image: img-Twitter" 
@@ -113,7 +122,18 @@
             image="img-Hatena" 
             position="-3 0.5 0"
             rotation="90 0 0">
-        </a-link>
+        </a-link>-->
+
+        <a-gui-button
+            id="button"
+            link="https://kawazap.hatenablog.com"
+            width="3" height="0.75"
+            onclick="button"
+            value="Wikipediaへのリンク"
+            margin="0 0 0.05 0"
+        ></a-gui-button>
+
+  
       </a-marker>
       
       <!--AR用カメラ-->
