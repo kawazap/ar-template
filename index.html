@@ -57,19 +57,19 @@
 
       <!--オブジェクトの位置について-->
       
-      <!--a-marker preset="custom"  type='pattern' url="./marker/pattern-qrcode.patt"-->
+      <!--a-marker preset="custom"  type='pattern' url="./marker/pattern-qrcode.patt"
 
         <a-plane 
-          rotation="-90 0 0"
-          position="-0.4 0 0" 
+          rotation="90 0 0"
+          position="-3 0 0" 
           color="#3199f9" 
           opacity="0.95" 
           mylink="url: https://twitter.com/mikan45593608">
-          <a-image src="himg-Twitter"></a-image>
+          <a-image src="img-Twitter"></a-image>
         </a-plane>
 
         <a-plane 
-          rotation="-90 0 0"
+          rotation="90 0 0"
           position="0 0 0" 
           color="#3199f9" 
           opacity="0.95" 
@@ -78,12 +78,24 @@
         </a-plane>
 
         <a-plane 
-          rotation="-90 0 0"
-          position="0 0 0.4" 
+          rotation="90 0 0"
+          position="3 0 0" 
           color="#3199f9" 
           opacity="0.95" 
           mylink="url: https://kawazap.hatenablog.com">
           <a-image src="img-Hatena"></a-image>
+        </a-plane>-->
+
+        <a-plane position="0 0 0.8" color="transparent" opacity="0" width="2" height="0.3" rotation="-90 0 0">
+          <a-box src="img-Twitter" position="-0.4 0 0" depth="0.15" height="0.15" width="0.15" mylink="url: https://twitter.com/mikan45593608">
+            <a-animation attribute="rotation" dur="7000" to="0 360 0" easing="linear" repeat="indefinite"></a-animation>
+          </a-box>
+          <a-box src="img-portfolio" position="0 0 0" depth="0.15" height="0.15" width="0.15" mylink="url: https://kawazap.github.io/main">
+            <a-animation attribute="rotation" dur="7000" to="0 360 0" easing="linear" repeat="indefinite"></a-animation>
+          </a-box>
+          <a-box src="img-Hatena" position="0.4 0 0" depth="0.15" height="0.15" width="0.15" mykink="url: https://kawazap.hatenablog.com">
+            <a-animation attribute="rotation" dur="7000" to="0 360 0" easing="linear" repeat="indefinite"></a-animation>
+          </a-box>
         </a-plane>
 
       <!--/a-marker-->
