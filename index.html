@@ -6,39 +6,39 @@
     <title>Kawazap's  Business card</title>
     <link rel="icon" href="favicon.ico">
     <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+    <!-- A-Frame ライブラリの読み込み -->
+    <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
+    <!-- AR.js ライブラリの読み込み -->
+    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.0/aframe/build/aframe-ar.js"></script>
+    <!-- shaderライブラリ読み込み -->
+    <script src="https://rawgit.com/mayognaise/aframe-gif-shader/master/dist/aframe-gif-shader.min.js"></script>
+    <!-- A-Frame内でリンクをつけるのに必要 -->
+    <script src="https://rawgit.com/gasolin/aframe-href-component/master/dist/aframe-href-component.min.js"></script>
+    <!--linkを開くためのもの-->
+    <script src="./js/link.js"></script>
+    <!--A-frane GUI-->
+    <script src="https://rawgit.com/rdub80/aframe-gui/master/dist/aframe-gui.min.js"></script>
+    <script>
+      AFRAME.registerComponent("mylink", {
+        schema: {
+          url: {default: ''}
+        },
+        init: function() {
+          var gata = this.data;
+          var el = this.el;
+          el.addEventListenr('click', function() {
+            window.open(data.url, '_blank');
+          });
+        }
+      });
+    </script>
   </head>
 
-  <!-- A-Frame ライブラリの読み込み -->
-  <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
-  <!-- AR.js ライブラリの読み込み -->
-  <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
-  <!-- shaderライブラリ読み込み -->
-  <script src="https://rawgit.com/mayognaise/aframe-gif-shader/master/dist/aframe-gif-shader.min.js"></script>
-  <!-- A-Frame内でリンクをつけるのに必要 -->
-  <script src="https://rawgit.com/gasolin/aframe-href-component/master/dist/aframe-href-component.min.js"></script>
-  <!--linkを開くためのもの-->
-  <script src="./js/link.js"></script>
-  <!--A-frane GUI-->
-  <script src="https://rawgit.com/rdub80/aframe-gui/master/dist/aframe-gui.min.js"></script>
-  <script>
-    AFRAME.registerComponent("mylink", {
-      schema: {
-        url: {default: ''}
-      },
-      init: function() {
-        var gata = this.data;
-        var el = this.el;
-        el.addEventListenr('click', function() {
-          window.open(data.url, '_blank');
-        });
-      }
-    });
-  </script>
 
-
-  <body>
+  <body style = 'margin : 0px; overflow : hidden;'>
     <!--a-scene embedded arjs= embedded arjs='trackingMethod: best;' -->
-    <a-scene embedded arjs="debugUIEnabled:false;" renderer="gammaOutput: true;" vr-mode-ui="enabled: false" >
+    <a-scene embedded arjs='trackingMethod: best;' >
       <!--外部ファイルの読み込み-->
       <a-assets>
         <a-asset-item id="Ob-Hatena" src="./image/Hatena.obj"></a-asset-item>
@@ -57,7 +57,7 @@
 
       <!--オブジェクトの位置について-->
       
-      <a-marker preset="custom"  type='pattern' url="./marker/pattern-qrcode.patt">
+      <!--a-marker preset="custom"  type='pattern' url="./marker/pattern-qrcode.patt"-->
 
         <a-plane 
           rotation="-90 0 0"
@@ -86,12 +86,14 @@
           <a-image src="img-Hatena"></a-image>
         </a-plane>
 
-      </a-marker>
+      <!--/a-marker-->
       
       <!--AR用カメラ-->
-      <a-entity camera>
-        <!--a-entity cursor="fuse: false; fuseTimeout: 500"-->
-      </a-entity>
+      <!--a-entity camera>
+        <-entity cursor="fuse: false; fuseTimeout: 500">
+      </a-entity-->
+      <a-entity id="camera" cursor="rayOrigin: mouse"></a-entity>
+      <a-marker-camera preset='hiro'></a-marker-camera>
     </a-scene>
   </body>
 
