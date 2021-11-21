@@ -25,3 +25,16 @@ AFRAME.registerComponent('new_window', {
         });
     }
 });
+
+AFRAME.registerComponent("mylink", {
+    schema: {
+        url: {default: ''}
+    },
+    init: function() {
+        var data = this.data;
+        var el = this.el;
+        el.addEventListener('click', function() {
+            window.open(data.url, '_blank');
+        });
+    }
+});
