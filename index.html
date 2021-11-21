@@ -29,17 +29,11 @@
       }
     })
 
-    window.button = function () {
-      var button = document.getElementById("button");
-      var url = button.getAttribute('link');
-      window.location.href = url;
-    }
-
   </script>
 
 
 
-    <a-scene embedded arjs="debugUIEnabled:false;" renderer="gammaOutput: true;" vr-mode-ui="enabled: false;"cursor='rayOrigin: mouse; fuse: true; fuseTimeout: 0' >
+    <a-scene embedded arjs= embedded arjs='trackingMethod: best;' >
       <!--外部ファイルの読み込み-->
       <a-assets>
         <a-asset-item id="Ob-Hatena" src="./image/Hatena.obj"></a-asset-item>
@@ -115,26 +109,21 @@
             image="img-portfolio" 
             position="2 0.5 0"
             rotation="90 0 0">
-        </a-link>
+        </a-link-->
 
-        <a-link href="https://kawazap.hatenablog.com" 
-            title="Hatena" 
-            image="img-Hatena" 
-            position="-3 0.5 0"
-            rotation="90 0 0">
-        </a-link>-->
+        <a-plane rotation="-90 0 0" color="#3199f9" opacity="0.95" navigate-on-click="url: https://twitter.com/mikan45593608">
+          <a-image src="himg-Twitter"></a-image>
+        </a-plane>
 
-        <a-gui-button
-            id="button"
-            link="https://kawazap.hatenablog.com"
-            width="3" height="0.75"
-            onclick="button"
-            value="blog"
-            margin="0 0 0.05 0"
-            rotation="90 0 0"
-        ></a-gui-button>
+        <a-plane rotation="-90 0 0" color="#3199f9" opacity="0.95" navigate-on-click="url: https://kawazap.github.io/main">
+          <a-image src="img-portfolio"></a-image>
+        </a-plane>
 
-  
+        <a-plane rotation="-90 0 0" color="#3199f9" opacity="0.95" navigate-on-click="url: https://kawazap.hatenablog.com">
+          <a-image src="img-Hatena"></a-image>
+        </a-plane>
+
+        
       </a-marker>
       
       <!--AR用カメラ-->
