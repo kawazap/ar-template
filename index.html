@@ -37,7 +37,8 @@
 
 
   <body>
-    <a-scene embedded arjs= embedded arjs='trackingMethod: best;' >
+    <!--a-scene embedded arjs= embedded arjs='trackingMethod: best;' -->
+    <a-scene embedded arjs="debugUIEnabled:false;" renderer="gammaOutput: true;" vr-mode-ui="enabled: false" >
       <!--外部ファイルの読み込み-->
       <a-assets>
         <a-asset-item id="Ob-Hatena" src="./image/Hatena.obj"></a-asset-item>
