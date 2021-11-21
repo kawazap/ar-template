@@ -43,34 +43,7 @@
 
       <!--オブジェクトの位置について-->
       
-      <!--a-marker preset="custom"  type='pattern' url="./marker/pattern-qrcode.patt"
-
-        <a-plane 
-          rotation="90 0 0"
-          position="-3 0 0" 
-          color="#3199f9" 
-          opacity="0.95" 
-          mylink="url: https://twitter.com/mikan45593608">
-          <a-image src="img-Twitter"></a-image>
-        </a-plane>
-
-        <a-plane 
-          rotation="90 0 0"
-          position="0 0 0" 
-          color="#3199f9" 
-          opacity="0.95" 
-          mylink="url: https://kawazap.github.io/main">
-          <a-image src="img-portfolio"></a-image>
-        </a-plane>
-
-        <a-plane 
-          rotation="90 0 0"
-          position="3 0 0" 
-          color="#3199f9" 
-          opacity="0.95" 
-          mylink="url: https://kawazap.hatenablog.com">
-          <a-image src="img-Hatena"></a-image>
-        </a-plane>-->
+      <a-marker preset="custom"  type='pattern' url="./marker/pattern-qrcode.patt">
 
         <a-plane position="0 0 0.8" color="transparent" opacity="0" width="2" height="0.3" rotation="-90 0 0">
           <a-box src="#img-Twitter" position="-1 0 0" depth="0.5" height="0.5" width="0.5" mylink="url: https://twitter.com/mikan45593608">
@@ -84,7 +57,7 @@
           </a-box>
         </a-plane>
 
-      <!--/a-marker-->
+      </a-marker>
       
       <!--AR用カメラ-->
       <!--a-entity camera>
