@@ -39,7 +39,7 @@
 
 
 
-    <a-scene embedded arjs="debugUIEnabled:false;" renderer="gammaOutput: true;" vr-mode-ui="enabled: false" >
+    <a-scene embedded arjs="debugUIEnabled:false;" renderer="gammaOutput: true;" vr-mode-ui="enabled: false;"cursor='rayOrigin: mouse; fuse: true; fuseTimeout: 0' >
       <!--外部ファイルの読み込み-->
       <a-assets>
         <a-asset-item id="Ob-Hatena" src="./image/Hatena.obj"></a-asset-item>
@@ -129,7 +129,7 @@
             link="https://kawazap.hatenablog.com"
             width="3" height="0.75"
             onclick="button"
-            value="Wikipediaへのリンク"
+            value="blog"
             margin="0 0 0.05 0"
             rotation="90 0 0"
         ></a-gui-button>
