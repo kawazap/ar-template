@@ -22,13 +22,17 @@
   <script src="https://rawgit.com/rdub80/aframe-gui/master/dist/aframe-gui.min.js"></script>
   <script>
     AFRAME.registerComponent("mylink", {
+      scheme: {
+        url: {default: ''}
+      },
       init: function() {
-      this.el.addEventListener("click", (e)=> {
-            window.location = this.data.href;
-      })
+        var gata = this.data;
+        var el = this.el;
+        el.addEventListenr('click', function() {
+          window.open(data.url, '_blank');
+        });
       }
-    })
-
+    });
   </script>
 
 
@@ -53,63 +57,6 @@
       <!--オブジェクトの位置について-->
       
       <a-marker preset="custom"  type='pattern' url="./marker/pattern-qrcode.patt">
-        <!--
-        <a-obj-model  
-            src="#Ob-Hatena"
-            mtl="#Mt-Hatena" 
-            scale="1 1 1" 
-            position="1 0.5 0" >
-        </a-obj-model >
-        <a-entity
-          link="href: https://kawazap.hatenablog.com; title: Hatena;"
-          position="1 0.5 0"
-        ></a-entity>
-
-
-        <a-obj-model 
-            src="#Ob-Twitter"
-            mtl="#Mt-Twitter" 
-            scale="1 1 1" 
-            position="-1 0.5 0">
-        </a-obj-model >
-        <a-entity
-          link="href: https://twitter.com/mikan45593608; title: Twitter;"
-          position="0 0 0"
-        ></a-entity>
-
-        <a-obj-model 
-            src="#Ob-portfolio"
-            mtl="#Mt-portfolio" 
-            scale="1 1 1" 
-            position="2 0.5 0">
-        </a-obj-model >
-          <a-entity
-          link="href: https://kawazap.github.io/main; title: Twitter;"
-          position="0 0 0"
-        ></a-entity>
-
-        <!--a-obj-model 
-            src="#Ob-Insta" 
-            mtl="#Mt-Insta" 
-            scale="1 1 1" 
-            position="-9 0 0"-->
-        <!--/a-obj-model-->-->
-
-        <!--a-entity 
-            link="href: https://twitter.com/mikan45593608; 
-            title: Twitter; 
-            image: img-Twitter" 
-            position="1 0.5 0"
-            rotation="90 0 0">
-        </a-entity>
-
-        <a-link 
-            href="https://kawazap.github.io/main" 
-            title="portfolio" 
-            image="img-portfolio" 
-            position="2 0.5 0"
-            rotation="90 0 0">
-        </a-link-->
 
         <a-plane rotation="-90 0 0" color="#3199f9" opacity="0.95" navigate-on-click="url: https://twitter.com/mikan45593608">
           <a-image src="himg-Twitter"></a-image>
