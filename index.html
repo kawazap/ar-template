@@ -11,14 +11,6 @@
     <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
     <!-- AR.js ライブラリの読み込み -->
     <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.0/aframe/build/aframe-ar.js"></script>
-    <!-- shaderライブラリ読み込み -->
-    <script src="https://rawgit.com/mayognaise/aframe-gif-shader/master/dist/aframe-gif-shader.min.js"></script>
-    <!-- A-Frame内でリンクをつけるのに必要 -->
-    <script src="https://rawgit.com/gasolin/aframe-href-component/master/dist/aframe-href-component.min.js"></script>
-    <!--linkを開くためのもの-->
-    <script src="./js/link.js"></script>
-    <!--A-frane GUI-->
-    <script src="https://rawgit.com/rdub80/aframe-gui/master/dist/aframe-gui.min.js"></script>  
   </head>
 
 
@@ -47,11 +39,14 @@
       <a-marker preset="custom" type="pattern" url="./marker/pattern-qrcode.patt">
       
           <a-plane position="0 -1 1" color="transparent" opacity="0" width="2" height="0.3" rotation="-90 0 0">
-            <a-plane id = twitter src="#img-Twitter" position="-1 0 0" depth="0.5" height="0.5" width="0.5" mylink="url: https://twitter.com/mikan45593608">
+            <a-plane id = twitter src="#img-Twitter" position="-1 0 0" depth="0.5" height="0.5" width="0.5" mylink="url: https://twitter.com/mikan45593608"
+            animation="property: rotation; from: 0 0 0; to: 0 360 0; dir: alternate; dur: 7000; loop: true; easing: easeInOutSine">
             </a-plane>
-            <a-plane id = portfolio src="#img-portfolio" position="1 0 0" depth="0.5" height="0.5" width="0.5" mylink="url: https://kawazap.github.io/main">
+            <a-plane id = portfolio src="#img-portfolio" position="1 0 0" depth="0.5" height="0.5" width="0.5" mylink="url: https://kawazap.github.io/main"
+            animation="property: rotation; from: 0 0 0; to: 0 360 0; dir: alternate; dur: 7000; loop: true; easing: easeInOutSine">
             </a-plane>
-            <a-plane id = Hatena src="#img-Hatena" position="0 0 0" depth="0.5" height="0.5" width="0.5" mykink="url:https://www.yahoo.co.jp/"> 
+            <a-plane id = Hatena src="#img-Github" position="0 0 0" depth="0.5" height="0.5" width="0.5" mykink="url:https://github.com/kawazap"
+            animation="property: rotation; from: 0 0 0; to: 0 360 0; dir: alternate; dur: 7000; loop: true; easing: easeInOutSine"> 
             </a-plane>
           </a-plane>
 
