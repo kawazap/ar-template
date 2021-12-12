@@ -35,7 +35,7 @@ AFRAME.registerComponent("mylink", {
         var el = this.el;
         el.addEventListener('click', function() {
             //window.open(data.url, '_blank');
-            window.location.href = url;
+            window.location.href = data.url;
         });
     }
 });
